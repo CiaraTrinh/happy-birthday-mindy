@@ -635,45 +635,53 @@ canvas {
     color: #FFD0C7;
 }
 
-/* For screens up to 414px (most small smartphones, e.g., iPhone 14, Samsung Galaxy S23) */
-@media (max-width: 414px) {
+/* For iPhone 16 (~390px) and iPhone 16 Plus (~428px), targeting viewports 360px–428px */
+@media (min-width: 360px) and (max-width: 428px) {
     #envelope {
         width: 90vw;
-        height: 55vw; /* Slightly adjusted height to maintain aspect ratio */
-        top: 20vh; /* Reduced to avoid overflow on shorter screens */
-        margin-top: 10px; /* Ensure some spacing from top */
+        height: 56vw; /* Proportional for 16.6:9 aspect ratio */
+        top: 18vh; /* Adjusted for taller iPhone 16/Plus screens */
+        margin-top: 12px;
+        border-radius: 8px; /* Modern aesthetic */
+        background-color: #E50046;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
     }
 
     .flap, .pocket {
         border-left-width: 45vw;
         border-right-width: 45vw;
-        border-bottom-width: 28vw;
-        border-top-width: 28vw;
+        border-bottom-width: 28.5vw;
+        border-top-width: 28.5vw;
     }
 
     .letter {
         width: 92%;
         height: 88%;
-        top: 6%; /* Slight adjustment for better centering */
+        top: 6%;
+        border-radius: 6px;
+        background-color: #FFF2EB;
+        box-shadow: 0 2px 26px rgba(0, 0, 0, 0.12);
     }
 
     .words {
-        font-size: 0.75rem; /* Slightly larger base font size for readability */
-        width: 90%; /* Slightly wider to utilize space */
-        left: 5%; /* Centered better */
+        font-size: 0.8rem; /* Optimized for 460 ppi */
+        width: 90%;
+        left: 5%;
+        font-family: "Dancing Script", cursive;
     }
 
     .words.line1 {
-        font-size: 1rem; /* Larger for emphasis */
+        font-size: 1.1rem;
+        background-color: #FFD0C7;
     }
 
     .words.line2, .words.line3, .words.line4, .words.line5,
     .words.line6, .words.line7, .words.line8, .words.line9, .words.line10 {
-        font-size: 0.7rem; /* Slightly larger for readability */
+        font-size: 0.75rem;
     }
 
     .words.line11 {
-        font-size: 1rem; /* Maintain prominence for signature line */
+        font-size: 1.05rem;
     }
 
     .heart:before,
@@ -683,75 +691,88 @@ canvas {
         height: 28px;
         border-radius: 12px 12px 0 0;
         transform-origin: 50% 70%;
+        background: #FF6363;
     }
 
     .envelope-wrapper {
-        height: 80vh; /* Relative height to avoid overflow */
-        animation: up-down 1s infinite; /* Keep animation but ensure it fits */
+        height: 85vh; /* Fits taller screens */
+        animation: up-down 1s infinite;
     }
 
     .reset button {
-        font-size: 12px; /* Smaller button text for small screens */
-        padding: 8px;
-        min-width: 100px; /* Smaller button width */
+        font-size: 13px;
+        padding: 10px;
+        min-width: 110px;
+        border: solid 2px #E50046;
+        color: #E50046;
+        background-color: transparent;
+        border-radius: 4px;
+    }
+
+    .reset button:hover {
+        background-color: #E50046;
+        color: #FFD0C7;
     }
 }
 
-/* For very small screens (e.g., iPhone SE, 320px or less) */
-@media (max-width: 320px) {
+/* Fallback for smaller screens (e.g., zoomed mode or smaller devices, <360px) */
+@media (max-width: 359px) {
     #envelope {
         width: 88vw;
-        height: 52vw; /* Further reduced for smaller screens */
-        top: 15vh; /* Adjusted for smaller viewport */
+        height: 53vw;
+        top: 15vh;
+        margin-top: 10px;
+        border-radius: 6px;
     }
 
     .flap, .pocket {
         border-left-width: 44vw;
         border-right-width: 44vw;
-        border-bottom-width: 26vw;
-        border-top-width: 26vw;
+        border-bottom-width: 26.5vw;
+        border-top-width: 26.5vw;
     }
 
     .letter {
         width: 90%;
-        height: 85%;
+        height: 86%;
         top: 7%;
+        border-radius: 5px;
     }
 
     .words {
-        font-size: 0.65rem; /* Slightly smaller but still readable */
+        font-size: 0.7rem;
         width: 88%;
         left: 6%;
     }
 
     .words.line1 {
-        font-size: 0.9rem;
+        font-size: 0.95rem;
     }
 
     .words.line2, .words.line3, .words.line4, .words.line5,
     .words.line6, .words.line7, .words.line8, .words.line9, .words.line10 {
-        font-size: 0.6rem; /* Minimum readable size */
+        font-size: 0.65rem;
     }
 
     .words.line11 {
-        font-size: 0.85rem;
+        font-size: 0.9rem;
     }
 
     .heart:before,
     .heart:after {
         left: 10px;
-        width: 15px;
-        height: 24px;
+        width: 16px;
+        height: 26px;
         border-radius: 10px 10px 0 0;
     }
 
     .envelope-wrapper {
-        height: 75vh; /* Further reduced for very small screens */
+        height: 80vh;
     }
 
     .reset button {
-        font-size: 10px;
-        padding: 6px;
-        min-width: 80px; /* Compact buttons */
+        font-size: 11px;
+        padding: 8px;
+        min-width: 90px;
     }
 }
