@@ -636,7 +636,7 @@ canvas {
 }
 
 /* For iPhone 16 (~390px) and iPhone 16 Plus (~428px), targeting viewports 360px–428px */
-@media (min-width: 360px) and (max-width: 428px) {
+@media (min-width: 375px) and (max-width: 430px) {
     #envelope {
         width: 90vw;
         height: 56vw; /* Proportional for 16.6:9 aspect ratio */
@@ -716,7 +716,7 @@ canvas {
 }
 
 /* Fallback for smaller screens (e.g., zoomed mode or smaller devices, <360px) */
-@media (max-width: 359px) {
+@media (max-width: 374px) {
     #envelope {
         width: 88vw;
         height: 53vw;
