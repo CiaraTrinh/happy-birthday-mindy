@@ -635,80 +635,123 @@ canvas {
     color: #FFD0C7;
 }
 
-@media (max-width: 375px) {
+/* For screens up to 414px (most small smartphones, e.g., iPhone 14, Samsung Galaxy S23) */
+@media (max-width: 414px) {
     #envelope {
         width: 90vw;
-        height: 54vw;
-        top: 40vh;
+        height: 55vw; /* Slightly adjusted height to maintain aspect ratio */
+        top: 20vh; /* Reduced to avoid overflow on shorter screens */
+        margin-top: 10px; /* Ensure some spacing from top */
     }
 
     .flap, .pocket {
-        border-left-width: 45.5vw;
-        border-right-width: 45.5vw;
-        border-bottom-width: 27.5vw;
-        border-top-width: 27.5vw;
+        border-left-width: 45vw;
+        border-right-width: 45vw;
+        border-bottom-width: 28vw;
+        border-top-width: 28vw;
     }
 
     .letter {
-        width: 95%;
-        height: 90%;
+        width: 92%;
+        height: 88%;
+        top: 6%; /* Slight adjustment for better centering */
     }
 
     .words {
-        font-size: 0.7rem;
+        font-size: 0.75rem; /* Slightly larger base font size for readability */
+        width: 90%; /* Slightly wider to utilize space */
+        left: 5%; /* Centered better */
+    }
+
+    .words.line1 {
+        font-size: 1rem; /* Larger for emphasis */
+    }
+
+    .words.line2, .words.line3, .words.line4, .words.line5,
+    .words.line6, .words.line7, .words.line8, .words.line9, .words.line10 {
+        font-size: 0.7rem; /* Slightly larger for readability */
+    }
+
+    .words.line11 {
+        font-size: 1rem; /* Maintain prominence for signature line */
+    }
+
+    .heart:before,
+    .heart:after {
+        left: 12px;
+        width: 18px;
+        height: 28px;
+        border-radius: 12px 12px 0 0;
+        transform-origin: 50% 70%;
+    }
+
+    .envelope-wrapper {
+        height: 80vh; /* Relative height to avoid overflow */
+        animation: up-down 1s infinite; /* Keep animation but ensure it fits */
+    }
+
+    .reset button {
+        font-size: 12px; /* Smaller button text for small screens */
+        padding: 8px;
+        min-width: 100px; /* Smaller button width */
+    }
+}
+
+/* For very small screens (e.g., iPhone SE, 320px or less) */
+@media (max-width: 320px) {
+    #envelope {
+        width: 88vw;
+        height: 52vw; /* Further reduced for smaller screens */
+        top: 15vh; /* Adjusted for smaller viewport */
+    }
+
+    .flap, .pocket {
+        border-left-width: 44vw;
+        border-right-width: 44vw;
+        border-bottom-width: 26vw;
+        border-top-width: 26vw;
+    }
+
+    .letter {
+        width: 90%;
+        height: 85%;
+        top: 7%;
+    }
+
+    .words {
+        font-size: 0.65rem; /* Slightly smaller but still readable */
+        width: 88%;
+        left: 6%;
     }
 
     .words.line1 {
         font-size: 0.9rem;
     }
 
-    .words.line2 {
-        font-size: 0.65rem;
-    }
-
-    .words.line3 {
-        font-size: 0.65rem;
-    }
-
-    .words.line4 {
-        font-size: 0.65rem;
-    }
-
-    .words.line5 {
-        font-size: 0.65rem;
-    }
-
-    .words.line6 {
-        font-size: 0.65rem;
-    }
-
-    .words.line7 {
-        font-size: 0.65rem;
-    }
-
-    .words.line8 {
-        font-size: 0.65rem;
-    }
-
-    .words.line9 {
-        font-size: 0.65rem;
-    }
-
-    .words.line10 {
-        font-size: 0.65rem;
+    .words.line2, .words.line3, .words.line4, .words.line5,
+    .words.line6, .words.line7, .words.line8, .words.line9, .words.line10 {
+        font-size: 0.6rem; /* Minimum readable size */
     }
 
     .words.line11 {
-        font-size: 0.9rem;
+        font-size: 0.85rem;
     }
 
     .heart:before,
     .heart:after {
         left: 10px;
         width: 15px;
-        height: 25px;
+        height: 24px;
         border-radius: 10px 10px 0 0;
-        transform-origin: 50% 70%;
+    }
+
+    .envelope-wrapper {
+        height: 75vh; /* Further reduced for very small screens */
+    }
+
+    .reset button {
+        font-size: 10px;
+        padding: 6px;
+        min-width: 80px; /* Compact buttons */
     }
 }
-
