@@ -640,9 +640,9 @@ canvas {
     #envelope {
         width: 90vw;
         height: 56vw; /* Proportional for 16.6:9 aspect ratio */
-        top: 18vh; /* Adjusted for taller iPhone 16/Plus screens */
+        top: 30vh; /* Adjusted for taller iPhone 16/Plus screens */
         margin-top: 12px;
-        border-radius: 8px; /* Modern aesthetic */
+        border-radius: 8px; /* Modern aesthec */
         background-color: #E50046;
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
     }
@@ -720,7 +720,7 @@ canvas {
     #envelope {
         width: 88vw;
         height: 53vw;
-        top: 15vh;
+        top: 25vh;
         margin-top: 10px;
         border-radius: 6px;
     }
