@@ -707,7 +707,7 @@ canvas {
         color: #E50046;
         background-color: transparent;
         border-radius: 4px;
-        bottom: 50px;
+        bottom: 30px;
     }
 
     .reset button:hover {
@@ -775,6 +775,6 @@ canvas {
         font-size: 11px;
         padding: 8px;
         min-width: 90px;
-        bottom: 50px;
+        bottom: 30px;
     }
 }
