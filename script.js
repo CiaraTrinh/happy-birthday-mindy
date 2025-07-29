@@ -7,7 +7,7 @@ document.getElementById('login-form').addEventListener('submit', function(event)
     const page2 = document.getElementById('page2');
     const audio = document.querySelector('audio');
     
-    if (password === 'iloveyou') {
+    if (password === '30072003') {
         audio.muted = false;
         audio.play().catch(error => console.log('Playback error:', error));
         page1.style.display = 'none';
